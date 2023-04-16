@@ -101,18 +101,22 @@ public:
  
 int main()
 {
-    current_account cur;
+     current_account cur;
     saving_account sav;
     char type;
-    cout<<"\nEnter S for saving customer and C for current a/c customer : ";
+    cout<<"\nWelcome to Prashanth Bank"<<endl;
+    cout<<"\Type 'S' for saving account customer and 'C' for current account customer : ";
     cin>>type;
+  
     int choice;
+      
     if(type=='s' || type=='S')
     {
         sav.getAccountDetails();
         while(1)
         {
-            cout<<"\nChoose Your Choice"<<endl;
+           
+            cout<<"\nWhich Operation would you like to perform?"<<endl;
             cout<<"1)   Deposit Money"<<endl;
             cout<<"2)   Withdraw Money"<<endl;
             cout<<"3)   Display Balance"<<endl;
@@ -120,6 +124,7 @@ int main()
             cout<<"5)   Exit"<<endl;
             cout<<"Enter Your choice: ";
             cin>>choice;
+            cout<<"\nProcessing..."<<endl;
             switch(choice)
             {
             case 1 :
@@ -144,10 +149,12 @@ int main()
     }
     else if(type=='c' || type=='C')
     {
+      
         cur.getAccountDetails();
         while(1)
         {
-            cout<<"\nChoose Your Choice"<<endl;
+            
+            cout<<"\nWhich Operation would you like to perform?"<<endl;
             cout<<"1)   Deposit"<<endl;
             cout<<"2)   Withdraw"<<endl;
             cout<<"3)   Display Balance"<<endl;
